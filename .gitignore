@@ -8,10 +8,11 @@ __pycache__
 *.pt
 
 # datasets
-dataset
+/dataset
 
 # model output
 /model-output
 
 # splitter
 /app/splitter.py
+/dataset/turkish-sentiment.csv
