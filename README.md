@@ -1,6 +1,6 @@
 # Turkish-Sentiment-Classification
 
-
+This repo is created as a base repo for NLP. Many downstream tasks will be added but now, with this repo you can classify sentences(angry, sad, happy, surprised) with the dataset you provide.
 
 ### <span style="color:#3D9F03"> Create Enviroment
 
@@ -37,40 +37,6 @@ python app.py --env local --train
 python app.py --env local --infer
 ```
 
-#### <span style="color:#3D9F03"> Train Classification</span>
-```bash
-python app.py --env local --train --classification
-```
+#### <span style="color:#3D9F03"> Docker-Compose (will be added)</span>
+##### <span style="color:#B8DD21"> Debug (will be added)</span>
 
-#### <span style="color:#3D9F03"> Inference YOLO</span>
-```bash
-python app.py --env local --infer --yolo
-```
-#### <span style="color:#3D9F03"> Inference Classification</span>
-```bash
-python app.py --env local --infer --classification
-```
-
-#### <span style="color:#3D9F03"> Model Architecture YOLO in Detail</span>
-```bash
-python app.py --env local --yolo --summary
-```
-#### <span style="color:#3D9F03"> Model Architecture Classification in Detail</span>
-```bash
-python app.py --env local --classification --summary
-```
-
-#### <span style="color:#3D9F03"> Board To Visualize </span>
-```bash
-tensorboard --logdir=runs --load_fast=false
-```
-
-#### <span style="color:#3D9F03"> Docker-Compose (not active)</span>
-##### <span style="color:#B8DD21"> Debug </span>
-```bash
-docker-compose up --build
-```
-##### <span style="color:#B8DD21"> Prod </span>
-```bash
-docker-compose up --build --detach
-```
