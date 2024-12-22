@@ -8,4 +8,10 @@ __pycache__
 *.pt
 
 # datasets
-/datasets
+dataset
+
+# model output
+/model-output
+
+# splitter
+/app/splitter.py
