@@ -1,0 +1,41 @@
+[project]
+    name = "Turkish Sentiment"
+    description = "Turkish Sentiment repository"
+    company = "Oguzhan"
+    author = "Mert Oğuzhan"
+
+[logger]
+    filepath="./logs/model_training.log"
+    rotation="50MB"
+
+[Train]
+    model_name = "Ravi07bec/llama-7b-pretrained-ravi-aug24"
+    num_labels = 5
+    load_in_4bit = true
+    rank = 8  # LoRA rank
+    lora_alpha = 32
+    lora_dropout = 0.05
+    bias = "none"
+    task_type = "SEQ_CLS"  # Sequence Classification
+    train_dir = "dataset/turkish-sentiment-train.csv"
+    val_dir = "dataset/turkish-sentiment-val.csv"
+    model_output_dir= "./model-output"
+    evaluation_strategy= "epoch"
+    learning_rate= 2e-5
+    per_device_train_batch_size= 2  # int-bit quantization'da VRAM tasarrufu için düşük batch size
+    per_device_eval_batch_size= 2
+    num_train_epochs= 5
+    weight_decay= 0.01
+    save_strategy= "epoch"
+    logging_dir= "./logs"
+    logging_steps= 10
+    save_total_limit= 2
+    fp16= true
+
+[Inference]
+    input_text = "Nasıl bu kadar geç geldi şaşırdım."
+    model_dir = "./model-output"
+    max_length = 128
+    truncation = true
+
+

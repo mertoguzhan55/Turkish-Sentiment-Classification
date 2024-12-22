@@ -1,0 +1,11 @@
+[project]
+    name = "Turkish Sentiment"
+    description = "Turkish Sentiment repository"
+    company = "Oguzhan"
+    author = "Mert Oğuzhan"
+
+[logger]
+    filepath="./logs/model_training.log"
+    rotation="50MB"
+
+
