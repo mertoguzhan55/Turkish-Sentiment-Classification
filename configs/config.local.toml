@@ -33,7 +33,7 @@
     fp16= true
 
 [Inference]
-    input_text = "Nasıl bu kadar geç geldi şaşırdım."
+    input_text = "..."
     model_dir = "./model-output"
     max_length = 128
     truncation = true
